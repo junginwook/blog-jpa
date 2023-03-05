@@ -32,5 +32,6 @@ public class Parent {
 
 	public void addChild(Child child) {
 		children.add(child);
+		child.setParent(this);
 	}
 }

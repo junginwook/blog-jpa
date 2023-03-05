@@ -33,6 +33,5 @@ public class Child {
 
 	public void setParent(Parent parent) {
 		this.parent = parent;
-		parent.addChild(this);
 	}
 }
