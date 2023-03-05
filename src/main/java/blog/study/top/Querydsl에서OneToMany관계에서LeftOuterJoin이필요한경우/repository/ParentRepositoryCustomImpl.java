@@ -3,7 +3,6 @@ package blog.study.top.Querydsl에서OneToMany관계에서LeftOuterJoin이필요
 import static blog.study.top.Querydsl에서OneToMany관계에서LeftOuterJoin이필요한경우.entity.QParent.*;
 
 import blog.study.top.Querydsl에서OneToMany관계에서LeftOuterJoin이필요한경우.entity.Parent;
-import blog.study.top.Querydsl에서OneToMany관계에서LeftOuterJoin이필요한경우.entity.QParent;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
