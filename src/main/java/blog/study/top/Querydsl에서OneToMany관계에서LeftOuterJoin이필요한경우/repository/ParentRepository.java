@@ -4,5 +4,4 @@ import blog.study.top.Querydsl에서OneToMany관계에서LeftOuterJoin이필요�
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ParentRepository extends JpaRepository<Parent, Long>, ParentRepositoryCustom {
-
 }
