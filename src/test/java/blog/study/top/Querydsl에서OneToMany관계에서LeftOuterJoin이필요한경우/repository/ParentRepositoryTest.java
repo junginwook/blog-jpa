@@ -16,9 +16,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 
-@ActiveProfiles("dev")
 @Import(QuerydslTestConfig.class)
-@SpringBootTest
+@DataJpaTest
 class ParentRepositoryTest {
 
 	@Autowired

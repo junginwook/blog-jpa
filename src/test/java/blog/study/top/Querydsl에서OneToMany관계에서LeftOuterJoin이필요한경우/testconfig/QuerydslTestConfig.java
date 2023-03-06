@@ -14,7 +14,6 @@ import org.springframework.context.annotation.Import;
 public class QuerydslTestConfig {
 	@Autowired
 	private JPAQueryFactory queryFactory;
-
 	@Bean
 	public ParentRepositoryCustom parentRepositoryCustom() {
 		return new ParentRepositoryCustomImpl(queryFactory);
