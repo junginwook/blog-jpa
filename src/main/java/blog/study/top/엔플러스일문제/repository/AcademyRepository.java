@@ -1,7 +1,7 @@
 package blog.study.top.엔플러스일문제.repository;
 
 
-import blog.study.top.엔플러스일문제.entity.Academy;
+import blog.study.top.entity.Academy;
 import java.util.List;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;

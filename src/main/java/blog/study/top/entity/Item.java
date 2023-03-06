@@ -1,4 +1,4 @@
-package blog.study.top.jpa에서대량의데이터를삭제할때주의해야할점.entity;
+package blog.study.top.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

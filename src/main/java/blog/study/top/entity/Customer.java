@@ -1,4 +1,4 @@
-package blog.study.top.엔플러스일문제.entity;
+package blog.study.top.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,10 +7,10 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @Entity
 @Getter
-@NoArgsConstructor
-public class Teacher {
+public class Customer {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class Teacher {
 
 	private String name;
 
-	public Teacher(String name) {
+	public Customer(String name) {
 		this.name = name;
 	}
 }

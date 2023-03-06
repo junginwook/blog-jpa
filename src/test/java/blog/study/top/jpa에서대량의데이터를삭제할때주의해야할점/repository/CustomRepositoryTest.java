@@ -1,9 +1,8 @@
 package blog.study.top.jpa에서대량의데이터를삭제할때주의해야할점.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
-import blog.study.top.jpa에서대량의데이터를삭제할때주의해야할점.entity.Customer;
+import blog.study.top.entity.Customer;
 import java.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

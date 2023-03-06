@@ -1,6 +1,6 @@
 package blog.study.top.엔플러스일문제.service;
 
-import blog.study.top.엔플러스일문제.entity.Academy;
+import blog.study.top.entity.Academy;
 import blog.study.top.엔플러스일문제.repository.AcademyRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
