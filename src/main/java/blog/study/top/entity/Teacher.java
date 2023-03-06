@@ -25,6 +25,8 @@ public class Teacher {
 
 	private String name;
 
+	private Long academyId;
+
 	public Teacher(String name) {
 		this.name = name;
 	}
