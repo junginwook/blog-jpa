@@ -15,9 +15,11 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@DynamicUpdate //더티체킹시 변경된 부분만 데이터베이스에 반영하도록
 @Entity
 @Table
 public class Academy {
