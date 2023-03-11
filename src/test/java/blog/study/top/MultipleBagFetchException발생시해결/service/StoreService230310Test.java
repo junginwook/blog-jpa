@@ -10,11 +10,14 @@ import blog.study.top.entity.Store;
 import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.TestPropertySource;
 
 @SpringBootTest
 @TestPropertySource(properties = "spring.jpa.properties.hibernate.default_batch_fetch_size=1000")
+@AutoConfigureTestDatabase(replace = Replace.NONE)
 class StoreService230310Test {
 
 	@Autowired
