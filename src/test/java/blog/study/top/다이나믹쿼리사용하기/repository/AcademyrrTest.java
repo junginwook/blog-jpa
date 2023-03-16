@@ -1,14 +1,15 @@
 package blog.study.top.다이나믹쿼리사용하기.repository;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import blog.study.top.다이나믹쿼리사용하기.QuerydslTestConfig;
+import blog.study.top.config.QuerydslConfiguration;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.Import;
 
-@Import(QuerydslTestConfig.class)
+@Import(QuerydslConfiguration.class)
+@AutoConfigureTestDatabase(replace = Replace.NONE) //property에 설정된 테스트 컨테이너를 사용하도록
 @DataJpaTest
 class AcademyrrTest {
 
