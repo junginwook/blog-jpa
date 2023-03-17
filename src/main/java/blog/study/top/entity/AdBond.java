@@ -9,6 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import java.time.LocalDate;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -28,4 +29,12 @@ public class AdBond {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "customer_id", foreignKey = @ForeignKey(name = "fk_ad_bond_customer"))
 	private Customer customer;
+
+	@Builder
+	public AdBond(long amount, LocalDate txDate, String orderType, Customer customer) {
+		this.amount = amount;
+		this.txDate = txDate;
+		this.orderType = orderType;
+		this.customer = customer;
+	}
 }

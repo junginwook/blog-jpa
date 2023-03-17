@@ -34,4 +34,12 @@ public class AdItem {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "customer_id", foreignKey = @ForeignKey(name = "fk_ad_item_customer"))
 	private Customer customer;
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public AdItem(String orderType) {
+		this.orderType = orderType;
+	}
 }

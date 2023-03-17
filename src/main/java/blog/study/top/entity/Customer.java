@@ -22,7 +22,7 @@ public class Customer {
 
 	private String customerNo;
 	private String customerName;
-	private String bizNo;
+	private Long bizNo;
 	private String ceoName;
 
 	@OneToOne(fetch = FetchType.LAZY, mappedBy = "customer")
@@ -30,5 +30,13 @@ public class Customer {
 
 	public Customer(String name) {
 		this.name = name;
+	}
+
+	public Customer(Long bizNo) {
+		this.bizNo = bizNo;
+	}
+
+	public void setShop(Shop shop) {
+		this.shop = shop;
 	}
 }
