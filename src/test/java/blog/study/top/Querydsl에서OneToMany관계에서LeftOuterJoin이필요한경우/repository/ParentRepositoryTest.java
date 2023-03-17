@@ -6,7 +6,7 @@ import static org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTest
 import blog.study.top.Querydsl에서OneToMany관계에서LeftOuterJoin이필요한경우.dto.Family;
 import blog.study.top.Querydsl에서OneToMany관계에서LeftOuterJoin이필요한경우.entity.Child;
 import blog.study.top.Querydsl에서OneToMany관계에서LeftOuterJoin이필요한경우.entity.Parent;
-import blog.study.top.Querydsl에서OneToMany관계에서LeftOuterJoin이필요한경우.testconfig.QuerydslTestConfig;
+import blog.study.top.config.QuerydslConfiguration;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -14,11 +14,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
-import org.springframework.test.context.ActiveProfiles;
 
-@Import(QuerydslTestConfig.class)
+@Import(QuerydslConfiguration.class)
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 @DataJpaTest
 class ParentRepositoryTest {
