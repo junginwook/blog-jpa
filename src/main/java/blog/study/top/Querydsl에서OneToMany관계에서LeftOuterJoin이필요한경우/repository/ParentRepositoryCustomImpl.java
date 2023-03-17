@@ -8,17 +8,17 @@ import static com.querydsl.core.group.GroupBy.list;
 import blog.study.top.Querydsl에서OneToMany관계에서LeftOuterJoin이필요한경우.dto.Family;
 import blog.study.top.Querydsl에서OneToMany관계에서LeftOuterJoin이필요한경우.entity.Child;
 import blog.study.top.Querydsl에서OneToMany관계에서LeftOuterJoin이필요한경우.entity.Parent;
-import blog.study.top.Querydsl에서OneToMany관계에서LeftOuterJoin이필요한경우.entity.QChild;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @RequiredArgsConstructor
 public class ParentRepositoryCustomImpl implements ParentRepositoryCustom {
 
+	@Autowired
 	private final JPAQueryFactory queryFactory;
 
 	@Override

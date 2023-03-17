@@ -28,7 +28,7 @@ public class Shop {
 	private String shopNo;
 	private String shopName;
 
-	@OneToOne(fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "customer_id")
 	private Customer customer;
 
@@ -45,5 +45,9 @@ public class Shop {
 			this.items = new ArrayList<>();
 		}
 		this.items.add(item);
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
 }
