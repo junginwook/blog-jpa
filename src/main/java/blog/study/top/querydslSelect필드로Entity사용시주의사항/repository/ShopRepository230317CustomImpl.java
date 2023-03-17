@@ -5,6 +5,7 @@ import static blog.study.top.entity.QAdItem.*;
 import blog.study.top.entity.AdBond;
 import blog.study.top.entity.QAdBond;
 import blog.study.top.entity.QAdItem;
+import blog.study.top.querydslSelect필드로Entity사용시주의사항.dto.AdBondDto;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import java.time.LocalDate;
@@ -23,7 +24,7 @@ public class ShopRepository230317CustomImpl implements ShopRepository230317Custo
 	 * dto로 조회하면 자동으로 조인이 되면서 조회하게 되네 그러면서 모든 필드값도 조회하고
 	 *
 	 * 2. 1+n
-	 *
+	 * oneToOne 조회시 대상 테이블로 조회할 경우
 	 *
 	 * select
 	 *         sum(a1_0.amount),
@@ -58,8 +59,23 @@ public class ShopRepository230317CustomImpl implements ShopRepository230317Custo
 						adItem.customer)
 				)
 				.from(adItem)
-				.where(adItem.orderType.in(orderTypes)
-						.and(adItem.txDate.between(startDate, endDate)))
+				.where(adItem.orderType.in(orderTypes))
+				.groupBy(adItem.orderType, adItem.txDate, adItem.customer)
+				.fetch();
+	}
+
+
+	@Override
+	public List<AdBondDto> createAdBondAdvanced(List<String> orderTypes) {
+		return queryFactory
+				.select(Projections.fields(AdBondDto.class,
+						adItem.amount.sum().as("amount"),
+						adItem.txDate,
+						adItem.orderType,
+						adItem.customer.id.as("customerId"))
+				)
+				.from(adItem)
+				.where(adItem.orderType.in(orderTypes))
 				.groupBy(adItem.orderType, adItem.txDate, adItem.customer)
 				.fetch();
 	}

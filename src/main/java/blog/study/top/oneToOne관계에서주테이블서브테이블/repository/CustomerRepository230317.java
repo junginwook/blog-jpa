@@ -1,4 +1,4 @@
-package blog.study.top.querydslSelect필드로Entity사용시주의사항.oneToOne관계에서주테이블서브테이블.repository;
+package blog.study.top.oneToOne관계에서주테이블서브테이블.repository;
 
 import blog.study.top.entity.Customer;
 import java.util.List;
