@@ -18,6 +18,11 @@ public class Customer {
 
 	private String name;
 
+	private String customerNo;
+	private String customerName;
+	private String bizNo;
+	private String ceoName;
+
 	public Customer(String name) {
 		this.name = name;
 	}
