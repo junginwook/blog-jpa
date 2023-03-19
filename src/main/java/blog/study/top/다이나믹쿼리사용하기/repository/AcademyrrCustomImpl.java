@@ -3,7 +3,6 @@ package blog.study.top.다이나믹쿼리사용하기.repository;
 import static blog.study.top.entity.QAcademy.*;
 
 import blog.study.top.entity.Academy;
-import blog.study.top.entity.QAcademy;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;

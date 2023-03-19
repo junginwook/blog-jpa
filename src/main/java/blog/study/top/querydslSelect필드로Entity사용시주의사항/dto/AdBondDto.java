@@ -19,7 +19,7 @@ public class AdBondDto {
 				.amount(amount)
 				.txDate(txDate)
 				.orderType(orderType)
-				.customer(new Customer(customerId))
+				.customer(new Customer())
 				.build();
 	}
 }

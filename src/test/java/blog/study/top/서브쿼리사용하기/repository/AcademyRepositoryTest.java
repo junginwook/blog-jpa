@@ -2,6 +2,7 @@ package blog.study.top.서브쿼리사용하기.repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import blog.study.top.config.QuerydslConfiguration;
 import blog.study.top.entity.Academy;
 import blog.study.top.entity.Student;
 import blog.study.top.서브쿼리사용하기.QuerydslTestConfig;
@@ -11,14 +12,16 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ActiveProfiles;
 
-@Import(QuerydslTestConfig.class)
-@ActiveProfiles("dev")
-@SpringBootTest
+@Import(QuerydslConfiguration.class)
+@AutoConfigureTestDatabase(replace = Replace.NONE)
+@DataJpaTest
 class AcademyRepositoryTest {
 	@Autowired
 	private AcademySubQueryRepositoryImpl academyRepositoryCustom;
