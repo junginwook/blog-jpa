@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Import;
 @Import({QuerydslConfiguration.class, BookRepository230318Querydsl.class})
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 @DataJpaTest
-class BookRepository230318QuerydslTest {
+class BookRepository230318Querydsl2Test {
 
 	@Autowired
 	private BookRepository230318Querydsl bookRepository230318Querydsl;

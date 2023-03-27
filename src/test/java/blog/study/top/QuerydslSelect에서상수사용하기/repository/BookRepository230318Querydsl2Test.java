@@ -15,13 +15,13 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.Import;
 
-@Import({BookRepository230318Querydsl.class, QuerydslConfiguration.class})
+@Import({BookRepository230318Querydsl2.class, QuerydslConfiguration.class})
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 @DataJpaTest
-class BookRepository230318QuerydslTest {
+class BookRepository230318Querydsl2Test {
 
 	@Autowired
-	private BookRepository230318Querydsl bookRepository230318Querydsl;
+	private BookRepository230318Querydsl2 bookRepository230318Querydsl2;
 
 	@Autowired
 	private BookRepository230318 bookRepository230318;
@@ -46,7 +46,7 @@ class BookRepository230318QuerydslTest {
 	@DisplayName("entity에 있는 상수 추가")
 	@Test
 	void getBookPage() {
-		List<BookPageDto> bookPage = bookRepository230318Querydsl.getBookPage(bookNo, pageNo);
+		List<BookPageDto> bookPage = bookRepository230318Querydsl2.getBookPage(bookNo, pageNo);
 
 		assertThat(bookPage).hasSize(10);
 		assertThat(bookPage.get(0).getBookNo()).isEqualTo(bookNo);
@@ -55,7 +55,7 @@ class BookRepository230318QuerydslTest {
 	@DisplayName("entity에 없는 상수 추가")
 	@Test
 	void testGetBookPageWithDtoField() {
-		List<BookPageDto> bookPageWithDtoField = bookRepository230318Querydsl.getBookPageWithDtoField(bookNo, pageNo);
+		List<BookPageDto> bookPageWithDtoField = bookRepository230318Querydsl2.getBookPageWithDtoField(bookNo, pageNo);
 
 		assertThat(bookPageWithDtoField).hasSize(10);
 		assertThat(bookPageWithDtoField.get(0).getBookNo()).isEqualTo(bookNo);

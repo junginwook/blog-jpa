@@ -4,21 +4,19 @@ import static blog.study.top.entity.QBook.*;
 
 import blog.study.top.QuerydslSelect에서상수사용하기.dto.BookPageDto;
 import blog.study.top.entity.Book;
-import blog.study.top.entity.QBook;
 import com.querydsl.core.types.Projections;
 import com.querydsl.core.types.dsl.Expressions;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import java.util.List;
-import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class BookRepository230318Querydsl extends QuerydslRepositorySupport {
+public class BookRepository230318Querydsl2 extends QuerydslRepositorySupport {
 
 	private final JPAQueryFactory queryFactory;
 
-	public BookRepository230318Querydsl(JPAQueryFactory queryFactory) {
+	public BookRepository230318Querydsl2(JPAQueryFactory queryFactory) {
 		super(Book.class);
 		this.queryFactory = queryFactory;
 	}
