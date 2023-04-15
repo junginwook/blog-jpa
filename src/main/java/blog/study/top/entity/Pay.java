@@ -1,5 +1,8 @@
 package blog.study.top.entity;
 
+import blog.study.top.entity.embedded.PayDetails;
+import jakarta.persistence.Embedded;
+import jakarta.persistence.Entity;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -8,7 +11,7 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor
+@Entity
 public class Pay {
 	private String code;
 	private Long amount;
