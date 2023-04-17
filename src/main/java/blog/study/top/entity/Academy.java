@@ -7,6 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.util.ArrayList;
@@ -40,6 +41,9 @@ public class Academy {
 
 	@Column
 	private String phoneNumber;
+
+	@ManyToOne
+	private Pay pay;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "academy")
 	private List<Student> students = new ArrayList<>();
